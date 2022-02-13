@@ -1,5 +1,7 @@
 package com.erictoribio.BookApi.mvc.BookController;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +20,12 @@ public class BooksContoller {
     public String showOneBook(@PathVariable("id") Long id ,Model model) {
         Book book = bookService.findBook(id);
         model.addAttribute("book", book);
+        return "showOne.jsp";
+	}
+	@GetMapping("/books")
+    public String showAllBook(Model model) {
+		List<Book> books = bookService.allBooks();
+        model.addAttribute("books", books);
         return "index.jsp";
 	}
-
 }
