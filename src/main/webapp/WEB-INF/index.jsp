@@ -15,6 +15,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
+<div class="p-4">
+	<h1>
+	Title :
+	<c:out value="${book.title}"/>
+	</h1>
+	<p>
+	Description:
+	<c:out value="${book.description}"/>
+	</p>
+	<p>
+	Language:
+	<c:out value="${book.language}"/>
+	</p>
+	<p>
+	Number of Pages:
+	<c:out value="${book.numberOfPages}"/>
+	</p>
+</div>
 </body>
 </html>

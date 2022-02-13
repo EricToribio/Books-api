@@ -1,4 +1,4 @@
-package com.erictoribio.BookApi.mvc.controllers;
+package com.erictoribio.BookApi.mvc.controller;
 
 import java.util.List;
 
